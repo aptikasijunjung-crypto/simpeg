@@ -27,6 +27,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/sub/modal/jabatan',  'modaljabatan')->name('modal.sub.jabatan');
         Route::post('/sub/modal/pilih',  'pilih')->name('modal.pilih.jabatan');
         Route::post('/sub/modal/pilih/proses',  'pilihjabatan')->name('proses.pilih.jabatan');
+        Route::post('/sub/modal/hapus/jabatan',  'modalhapus')->name('modal.hapus.jabatan');
+        Route::post('/sub/proses/hapus/jabatan',  'proseshapus')->name('proses.hapus.jabatan');
     });
     Route::controller(JabatanController::class)->group(function () {
         Route::get('/jabatan', 'index')->name('jabatan');
@@ -35,5 +37,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
     Route::controller(AutocomplateController::class)->group(function () {
         Route::get('/auto/jabatan', 'jabatan')->name('auto.jabatan');
+        Route::get('/auto/koordinator', 'koordinator')->name('auto.koordinator');
     });
 });

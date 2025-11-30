@@ -58,3 +58,18 @@
         ';
         return $t;
     }
+    function dialogModal()
+    {
+        $t = '
+        <div id="dialogModal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center p-5 dialog-modal">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        ';
+        return $t;
+    }

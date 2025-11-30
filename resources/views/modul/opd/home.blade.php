@@ -28,6 +28,7 @@
         echo lgModal();
         echo xlModal();
         echo flipModal();
+        echo dialogModal();
     @endphp
 @endsection
 

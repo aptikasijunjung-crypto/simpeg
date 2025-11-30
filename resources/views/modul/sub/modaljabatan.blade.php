@@ -5,14 +5,17 @@
     </button>
 </p>
 <br>
-<p class="mt-3 tabel-posisi">
+<h6 class="mb-4">{{ $data->opd_name }} / {{ $data->sub_opd_name }}</h6>
+<div class="mt-3 tabel-posisi" id="tabelPosisi">
     @php
         echo tabelPosisi($tabel);
     @endphp
-</p>
-
+</div>
+<br>
+<a href="javascript:void(0);" class="btn btn-link link-success fw-medium material-shadow-none" data-bs-dismiss="modal"><i
+        class="ri-close-line me-1 align-middle"></i> Close</a>
 <script>
-    $("button.modal-pilih-jabatan").click(function(e) {
+    $(document).on("click", "button.modal-pilih-jabatan", function(e) {
         e.preventDefault();
         $('#flipModal').modal('show');
         id = $(this).attr('id');
@@ -27,5 +30,20 @@
                 $("div.flip-modal").html(data);
             });
 
+    });
+
+    $(document).on("click", "button.modal-hapus-jabatan", function() {
+        $('#dialogModal').modal('show');
+        id = $(this).attr('id');
+        kode = $(this).attr('kode');
+        csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        $.post("{{ route('modal.hapus.jabatan') }}", {
+                id: id,
+                kode: kode,
+                _token: csrfToken
+            },
+            function(data) {
+                $("div.dialog-modal").html(data);
+            });
     });
 </script>

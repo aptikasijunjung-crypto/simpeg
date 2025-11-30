@@ -62,8 +62,8 @@ function tabelSubOpd($data)
             <td class='text-center'>" . $no . ".</td>
             <td>" . $i->sub_opd_name . "</td>    
             <td class='text-center'>
-                <button type='button' class='btn btn-link icon-demo-content modal-sub-jabatan' id='" . $i->sub_opd_id . "'>
-                    <i class='bx bx-group text-info'></i>
+                <button type='button' class='btnku btn-link link-success modal-sub-jabatan' id='" . $i->sub_opd_id . "'>
+                    <i class='bx bx-group'></i>
                 </button>
             </td>
             
@@ -103,9 +103,9 @@ function tabelJabatan($data)
 
             <td class='text-center'>" . $no . ".</td>
             <td>" . $i->name . "</td>  
-            <td>
-                <button type='button' class='btn btn-link icon-demo-content modal-jabatan' id='" . $i->id . "'>
-                    <i class='bx bx-edit text-success'></i>
+            <td class='text-center'>
+                <button type='button' class='btnku btn-link link-success  modal-jabatan' id='" . $i->id . "'>
+                    <i class='ri-edit-2-line fs-15'></i>
                 </button>
             </td>  
             <td></td>  
@@ -136,6 +136,7 @@ function tabelPosisi($data)
                     <th>Title</th>
                     <th>Koordinator</th>
                     <th class='text-center' width='6%'>Edit</th>
+                    <th class='text-center' width='6%'>Hapus</th>
                                         
                                          
                 </tr>
@@ -154,6 +155,12 @@ function tabelPosisi($data)
                 <button type='button' class='btnku btn-link modal-pilih-jabatan' id='" . $i->sub_opd_id . "'
                 kode='" . $i->id . "'>
                     <i class='ri-edit-box-line text-success'></i>
+                </button>
+            </td>
+            <td class='text-center'>
+                <button type='button' class='btnku btn-link link-danger modal-hapus-jabatan' id='" . $i->sub_opd_id . "'
+                kode='" . $i->id . "'>
+                    <i class='bx bx-trash'></i>
                 </button>
             </td>
            

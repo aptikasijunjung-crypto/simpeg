@@ -17,8 +17,9 @@
     <div class="col-md-12">
         <label for="fullnameInput" class="form-label">Koordinator</label>
         <input type="text" class="form-control" id="koordinator_name" name="koordinator_name"
-            placeholder="Koordinator atau Atasan Langsung">
-        <input type="hidden" name="koordinator_id" id="koordinator_id" value="">
+            placeholder="Koordinator atau Atasan Langsung" value="{{ $kode == 0 ? '' : $detail->koordinator }}">
+        <input type="hidden" name="koordinator_id" id="koordinator_id"
+            value="{{ $kode == 0 ? '' : $detail->koordinator_id }}">
     </div>
 
     <div class="hstack gap-2 justify-content-center mt-3">
@@ -94,7 +95,8 @@
                 komentar(0, "Error", data.komen);
             } else {
                 komentar(1, 'Success', data.komen);
-                $('#flipModal').modal('hide')
+                $('#flipModal').modal('hide');
+                $("div#tabelPosisi").html(data.tabel);
             }
 
         }, 'json');
