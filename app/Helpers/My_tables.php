@@ -134,6 +134,8 @@ function tabelPosisi($data)
                     <th class='text-center' width='6%'>No</th>
                     <th>Jabatan</th>
                     <th>Title</th>
+                    <th>Koordinator</th>
+                    <th class='text-center' width='6%'>Edit</th>
                                         
                                          
                 </tr>
@@ -147,6 +149,13 @@ function tabelPosisi($data)
             <td class='text-center'>" . $no . ".</td>
             <td >" . $i->jabatan_name . "</td>
             <td>" . $i->title . "</td>
+            <td>" . $i->koordinator . "</td>
+            <td class='text-center'>
+                <button type='button' class='btnku btn-link modal-pilih-jabatan' id='" . $i->sub_opd_id . "'
+                kode='" . $i->id . "'>
+                    <i class='ri-edit-box-line text-success'></i>
+                </button>
+            </td>
            
             
             

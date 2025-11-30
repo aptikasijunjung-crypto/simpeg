@@ -31,7 +31,46 @@
     <!-- custom Css-->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/jquery-ui.css') }}" rel="stylesheet" type="text/css" />
+    <style>
+        .btnku {
+            --vz-btn-padding-x: 0rem;
+            --vz-btn-padding-y: 0rem;
+            --vz-btn-font-size: var(--vz-font-base);
+            --vz-btn-font-weight: var(--vz-btn-font-weight-custom);
+            --vz-btn-line-height: 1.5;
+            --vz-btn-color: var(--vz-body-color);
+            --vz-btn-bg: transparent;
+            --vz-btn-border-width: var(--vz-border-width);
+            --vz-btn-border-color: transparent;
+            --vz-btn-border-radius: var(--vz-border-radius);
+            --vz-btn-hover-border-color: transparent;
+            --vz-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+            --vz-btn-disabled-opacity: 0.65;
+            --vz-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--vz-btn-focus-shadow-rgb), .5);
+            display: inline-block;
+            padding: var(--vz-btn-padding-y) var(--vz-btn-padding-x);
+            font-family: var(--vz-btn-font-family);
+            font-size: var(--vz-btn-font-size);
+            font-weight: var(--vz-btn-font-weight);
+            line-height: var(--vz-btn-line-height);
+            color: var(--vz-btn-color);
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: var(--vz-btn-border-width) solid var(--vz-btn-border-color);
+            border-radius: var(--vz-btn-border-radius);
+            background-color: var(--vz-btn-bg);
+            -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 
+        }
+    </style>
 </head>
 
 <body>
