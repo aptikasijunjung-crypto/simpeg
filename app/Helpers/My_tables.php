@@ -23,8 +23,8 @@ function tabelOpd($data)
             <td class='text-center'>" . $no . ".</td>
             <td>" . $i->opd_name . "</td>    
             <td>
-            <button class='btn btn-link modal-sub icon-demo-content' id='" . $i->opd_id . "'>
-                <i class='bx bx-layer-plus text-success'></i>
+            <button class='btnku btn-link modal-sub link-success' id='" . $i->opd_id . "'>
+                Masuk <i class='ri-arrow-right-line align-middle'></i>
             </button>
             </td>
         </tr>
@@ -63,7 +63,7 @@ function tabelSubOpd($data)
             <td>" . $i->sub_opd_name . "</td>    
             <td class='text-center'>
                 <button type='button' class='btnku btn-link link-success modal-sub-jabatan' id='" . $i->sub_opd_id . "'>
-                    <i class='bx bx-group'></i>
+                    Masuk <i class='ri-arrow-right-line align-middle'></i>
                 </button>
             </td>
             
